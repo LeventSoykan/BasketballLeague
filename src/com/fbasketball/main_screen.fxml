@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fbasketball.Controller">
+   <children>
+      <VBox fx:id="container" prefHeight="200.0" prefWidth="100.0">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <children>
+             <ImageView fx:id="mainImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@basketball.png" />
+                 </image></ImageView>
+            <TextField fx:id="leagueNameText" promptText="Please Enter League Name" />
+             <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStart" text="Start League" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

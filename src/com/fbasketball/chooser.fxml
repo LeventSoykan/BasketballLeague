@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fbasketball.Chooser">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="label" prefHeight="17.0" prefWidth="149.0" text="Please Select Team One" />
+      <ChoiceBox fx:id="teamChoice1" prefWidth="150.0" GridPane.rowIndex="1" />
+      <CheckComboBox fx:id="playerChoice1" prefWidth="150.0" visible="false" GridPane.rowIndex="1" />
+      <ChoiceBox fx:id="teamChoice2" prefWidth="150.0" visible="false" GridPane.rowIndex="1" />
+      <CheckComboBox fx:id="playerChoice2" prefWidth="150.0" visible="false" GridPane.rowIndex="1" />
+      <Button fx:id="confirmChoice2" mnemonicParsing="false" onAction="#firstPlayerList" text="OK" visible="false" prefHeight="25.0" prefWidth="149.0" GridPane.rowIndex="2"/>
+      <Button fx:id="confirmChoice3" mnemonicParsing="false" onAction="#secondTeam" text="OK" visible="false" prefHeight="25.0" prefWidth="149.0" GridPane.rowIndex="2"/>
+      <Button fx:id="confirmChoice4" mnemonicParsing="false" onAction="#secondPlayerList" text="OK" visible="false" prefHeight="25.0" prefWidth="149.0" GridPane.rowIndex="2"/>
+      <Button fx:id="confirmChoice1" mnemonicParsing="false" onAction="#firstTeam" prefHeight="25.0" prefWidth="149.0" text="OK" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_basketballleague" default="compile.module.basketballleague">
+  <dirname property="module.basketballleague.basedir" file="${ant.file.module_basketballleague}"/>
+  
+  <property name="module.jdk.home.basketballleague" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.basketballleague" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.basketballleague" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.basketballleague" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="basketballleague.output.dir" value="${module.basketballleague.basedir}/out/production/BasketballLeague"/>
+  <property name="basketballleague.testoutput.dir" value="${module.basketballleague.basedir}/out/test/BasketballLeague"/>
+  
+  <path id="basketballleague.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="basketballleague.module.production.classpath">
+    <path refid="${module.jdk.classpath.basketballleague}"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-ooxml-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-examples-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-excelant-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-samples-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/fxsampler-1.0.9.jar"/>
+  </path>
+  
+  <path id="basketballleague.runtime.production.module.classpath">
+    <pathelement location="${basketballleague.output.dir}"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-ooxml-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-examples-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-excelant-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-samples-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/fxsampler-1.0.9.jar"/>
+  </path>
+  
+  <path id="basketballleague.module.classpath">
+    <path refid="${module.jdk.classpath.basketballleague}"/>
+    <pathelement location="${basketballleague.output.dir}"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-ooxml-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-examples-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-excelant-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-samples-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/fxsampler-1.0.9.jar"/>
+  </path>
+  
+  <path id="basketballleague.runtime.module.classpath">
+    <pathelement location="${basketballleague.testoutput.dir}"/>
+    <pathelement location="${basketballleague.output.dir}"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-3.16/poi-ooxml-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-examples-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-excelant-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/controlsfx-samples-8.40.12.jar"/>
+    <pathelement location="${basedir}/../../Desktop/JavaProject/controlsfx-8.40.12/fxsampler-1.0.9.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.basketballleague">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.basketballleague">
+    <patternset refid="excluded.from.module.basketballleague"/>
+  </patternset>
+  
+  <path id="basketballleague.module.sourcepath">
+    <dirset dir="${module.basketballleague.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.basketballleague" depends="compile.module.basketballleague.production,compile.module.basketballleague.tests" description="Compile module BasketballLeague"/>
+  
+  <target name="compile.module.basketballleague.production" depends="register.custom.compilers" description="Compile module BasketballLeague; production classes">
+    <mkdir dir="${basketballleague.output.dir}"/>
+    <javac2 destdir="${basketballleague.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.basketballleague}/javac">
+      <compilerarg line="${compiler.args.basketballleague}"/>
+      <bootclasspath refid="basketballleague.module.bootclasspath"/>
+      <classpath refid="basketballleague.module.production.classpath"/>
+      <src refid="basketballleague.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.basketballleague"/>
+    </javac2>
+    
+    <copy todir="${basketballleague.output.dir}">
+      <fileset dir="${module.basketballleague.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.basketballleague.tests" depends="register.custom.compilers,compile.module.basketballleague.production" description="compile module BasketballLeague; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.basketballleague" description="cleanup module">
+    <delete dir="${basketballleague.output.dir}"/>
+    <delete dir="${basketballleague.testoutput.dir}"/>
+  </target>
+</project>
